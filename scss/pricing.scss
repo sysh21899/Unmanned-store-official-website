@@ -1,0 +1,278 @@
+/*===================================================
+    Start Pricing Section
+=====================================================*/
+
+.pricing-section {
+    background: url(../images/home-2/pricing-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 100px 0 70px;
+    position: relative;
+    z-index: 1;
+
+    .pricing-left-sp {
+        position: absolute;
+        top: 97%;
+        left: 100px;
+        z-index: -1;
+    }
+
+    .sec-title {
+        margin-bottom: 60px;
+    }
+}
+
+.pricing-main-bx {
+    position: relative;
+    z-index: 1;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: -0.1rem;
+        background: conic-gradient(from var(--gradient-angle), var(--theme-color2), var(--theme-color1), var(--theme-color2), var(--theme-color1), var(--theme-color2));
+        border-radius: inherit;
+        -webkit-animation: rotate 2.5s linear infinite;
+        animation: rotate 2.5s linear infinite;
+        -webkit-transition: all 300ms ease;
+        transition: all 300ms ease;
+        opacity: 0;
+        border-radius: 15px;
+
+    }
+
+    &:hover::before,
+    ::after {
+        opacity: 1;
+    }
+
+    @keyframes rotate {
+        0% {
+            --gradient-angle: 0deg;
+        }
+
+        100% {
+            --gradient-angle: 360deg;
+        }
+    }
+}
+
+.pricing-single-bx {
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 1;
+    transition: all 300ms ease;
+    background: linear-gradient(0deg, #0C0C0C 0%, #1C1C1C 98.44%);
+    padding: 36px 40px 30px;
+    border: 1px solid var(--border-theme-color1);
+    border-radius: 15px;
+    overflow: hidden;
+
+    .inner-box {
+        position: relative;
+        transition: all 300ms ease;
+
+        h3.popular {
+            font-family: var(--title-font);
+            font-weight: 400;
+            font-size: 14px;
+            background: #2B2B2B;
+            display: inline-block;
+            padding: 9px 21px;
+            border-radius: 30px;
+            position: absolute;
+            right: 0;
+            top: 6px;
+        }
+
+        h4.title {
+            font-size: 24px;
+            font-weight: 500;
+            margin: 0 0 10px;
+        }
+
+        .price-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            h4 {
+                font-weight: 600;
+                font-size: 50px;
+                line-height: 60px;
+                color: var(--theme-color2);
+            }
+
+            .validaty {
+                margin-top: 13px;
+                font-size: 18px;
+            }
+        }
+
+        p.pricing-text {
+            line-height: 26px;
+            margin: 0 29px 38px 0;
+        }
+
+        .pricing-btn a {
+            display: block;
+            font-family: var(--title-font);
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--theme-color3);
+            background: var(--theme-color1);
+            padding: 13px 20px;
+            border-radius: 30px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+
+            &::before {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 0;
+                height: 100%;
+                background: var(--theme-color2);
+                z-index: -1;
+                content: '';
+                transition: 0.5s;
+            }
+
+            i {
+                margin-left: 10px;
+            }
+
+        }
+
+        &:hover .pricing-btn a {
+            color: var(--theme-color1);
+        }
+
+        &:hover .pricing-btn a::before {
+            width: 100%;
+            left: 0;
+        }
+
+        &:hover .feature::after {
+            opacity: 1;
+            width: 100%;
+            left: 0;
+        }
+
+        &:hover .feature::before {
+            opacity: 0;
+        }
+    }
+
+    .feature {
+        margin-top: 64px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: -35px;
+            background: #2B2B2B;
+            width: 100%;
+            height: 1px;
+            content: "";
+            transition: 0.5s;
+        }
+
+        &::after {
+            position: absolute;
+            left: 50%;
+            top: -35px;
+            background: var(--theme-color2);
+            width: 0%;
+            height: 1px;
+            content: "";
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+
+        .feature-title {
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        ul {
+            li {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 10px;
+
+                i {
+                    color: var(--theme-color2);
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .nexella-hover-bx {
+        background: var(--theme-color1);
+        height: 100%;
+        top: 0;
+        opacity: 0;
+        position: absolute;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.5s ease 0s;
+        transition: all 0.5s ease 0s;
+        width: 25%;
+        z-index: -1;
+    }
+
+    .hover-bx {
+        left: 0;
+        -webkit-transition-delay: 0.105s;
+        transition-delay: 0.105s;
+    }
+
+    .hover-bx2 {
+        left: 25%;
+        -webkit-transition-delay: 0.105s;
+        transition-delay: 0.105s;
+    }
+
+    .hover-bx3 {
+        left: 50%;
+        -webkit-transition-delay: 0.105s;
+        transition-delay: 0.105s;
+    }
+
+    .hover-bx4 {
+        left: 75%;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+
+    &:hover .nexella-hover-bx {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.pricing-img-column {
+    position: relative;
+    z-index: 1;
+
+    .pricing-shape {
+        position: absolute;
+        bottom: 14px;
+        right: 35px;
+        z-index: 1;
+    }
+}

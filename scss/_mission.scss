@@ -1,0 +1,78 @@
+/*======================================================
+  Start Mission Section
+========================================================*/
+
+.mission-section {
+  padding: 0 0 120px;
+  background: var(--theme-color4);
+
+  .icon-box {
+    display: flex;
+    gap: 20px;
+  }
+
+  h4.icon-bx-title {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 28px;
+    font-weight: var(--h5-font-weight);
+  }
+
+  p.mission-description {
+    line-height: 26px;
+    margin-top: 28px;
+    width: 85%;
+  }
+
+  .mission-list-item {
+    border-top: 1px solid var(--border-theme-color1);
+    border-bottom: 1px solid var(--border-theme-color1);
+    padding: 35px 0 35px;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      content: '';
+      right: 0;
+      top: 0;
+      margin: auto;
+      left: 0;
+      height: 100%;
+      width: 1px;
+      background: var(--border-theme-color1);
+      z-index: -1;
+    }
+
+    .mission-list {
+      text-align: center;
+
+    }
+
+    .misssion-list-two {
+      margin-top: 35px;
+      border-top: 1px solid var(--border-theme-color1);
+      padding-top: 35px;
+      padding-top: 30px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      li {
+        font-weight: var(--h5-font-weight);
+        font-size: 24px;
+        color: var(--theme-color3);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: 0.5s;
+
+        &:hover {
+          color: var(--theme-color2);
+        }
+      }
+    }
+  }
+}

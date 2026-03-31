@@ -1,0 +1,275 @@
+/***
+
+==================================================================
+	Main Footer
+==================================================================
+
+***/
+
+.main-footer {
+	background: url(../images/main-home/footer-bg.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+/* Widget Section */
+.main-footer {
+	.widgets-section {
+		position: relative;
+		padding: 100px 0 56px;
+
+		&::before {
+			position: absolute;
+			left: 0;
+			bottom: 10px;
+			width: 100%;
+			content: "";
+			height: 1px;
+			background: var(--theme-color5);
+		}
+
+		&::after {
+			position: absolute;
+			left: 0;
+			top: 44%;
+			width: 100%;
+			content: "";
+			height: 1px;
+			background: var(--theme-color5);
+		}
+	}
+
+	.footer-column {
+		position: relative;
+		margin-bottom: 30px;
+		padding-right: 55px;
+
+		&:first-child {
+			padding-right: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	.footer-widget {
+		position: relative;
+	}
+
+	.widget-title {
+		position: relative;
+		color: #ffffff;
+		padding-bottom: 18px;
+		margin-bottom: 25px;
+		font-weight: 500;
+		font-size: 28px;
+	}
+}
+
+// Footer Heading
+
+.footer-upper {
+	@include flex-between;
+	margin-bottom: 165px;
+
+	.footer-title {
+		font-weight: 800;
+		font-size: 100px;
+		line-height: 110px;
+
+		span {
+			color: rgba(97, 97, 97, 1);
+		}
+	}
+
+	.footer-icon {
+		height: 200px;
+		width: 200px;
+		line-height: 200px;
+		background: var(--theme-color2);
+		border-radius: 50%;
+		text-align: center;
+		float: right;
+	}
+}
+
+.main-footer .about-widget {
+	position: relative;
+
+	.logo {
+		position: relative;
+		margin-bottom: 30px;
+		max-width: 190px;
+
+		@include media-breakpoint-down(xl) {
+			margin-bottom: 30px;
+		}
+	}
+
+	p.footer-des {
+		line-height: 26px;
+		color: var(--theme-color8);
+		margin-bottom: 40px;
+	}
+
+}
+
+/*=== User LInks ===*/
+
+.user-links {
+	position: relative;
+
+	li {
+		position: relative;
+		font-size: 16px;
+		line-height: 24px;
+		color: #8c8f94;
+		font-weight: 400;
+		margin-bottom: 14px;
+
+		a {
+			position: relative;
+			display: block;
+			transition: all 300ms ease;
+			font-family: Plus Jakarta Sans;
+			font-weight: 500;
+			font-size: 16px;
+			color: var(--theme-color3);
+			margin-bottom: 32px;
+
+			&:hover {
+				color: var(--theme-color2);
+			}
+
+			&:before {
+				position: absolute;
+				left: 0;
+				bottom: -17px;
+				width: 100%;
+				height: 1px;
+				background: var(--theme-color5);
+				content: "";
+				transition: all 300ms ease;
+			}
+
+			&::after {
+				position: absolute;
+				left: 0;
+				bottom: -17px;
+				width: 0;
+				background: var(--theme-color2);
+				content: "";
+				transition: all 300ms ease;
+				opacity: 0;
+				height: 1px;
+			}
+
+			&:hover::after {
+				width: 100%;
+				opacity: 1;
+			}
+
+			i {
+				float: right;
+			}
+		}
+	}
+}
+
+/* Contact Widget */
+.contact-widget {
+	position: relative;
+
+	.widget-title {
+		padding-bottom: 40px;
+		margin-bottom: 0px;
+	}
+
+	.address {
+		margin-bottom: 26px;
+
+		p {
+			font-family: var(--title-font);
+			font-weight: 500;
+			font-size: 18px;
+			margin: 0 0 0;
+		}
+
+		a {
+			display: inline-block;
+			font-family: var(--title-font);
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 28px;
+			color: #fff;
+			margin: 8px 0 0;
+		}
+	}
+}
+
+/*=== Footer Bottom ===*/
+.footer-bottom {
+	position: relative;
+	width: 100%;
+
+	.inner-container {
+		@include flex-between;
+		padding: 32px 1px;
+	}
+
+	.copyright-text {
+		position: relative;
+		color: var(--theme-color3);
+
+		a {
+			color: rgba(161, 161, 161, 1);
+
+			&:hover {
+				color: #ffffff;
+			}
+		}
+	}
+
+	.footer-links-wrapper a {
+		display: inline-block;
+		font-family: var(--title-font);
+		font-weight: 500;
+		font-size: 16px;
+		color: var(--theme-color3);
+		margin-right: 35px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+// style two fotter
+
+.widgets-section.style_two {
+
+	&::after {
+		display: none;
+	}
+
+	&::before {
+		left: 0;
+		right: 0;
+		margin: auto;
+		bottom: 10px;
+		width: 69%;
+		background: #bab9b9b0;
+	}
+
+	h2.footer-main-title {
+		font-size: 46px;
+		font-weight: 700;
+		line-height: 56px;
+		margin-top: -5px;
+		margin-bottom: 41px;
+	}
+
+}

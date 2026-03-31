@@ -1,0 +1,332 @@
+/*** 
+
+====================================================================
+		Work Section
+====================================================================
+
+***/
+
+.work-section {
+  position: relative;
+  padding: 118px 0 90px;
+  background: var(--theme-color-light);
+  z-index: 1;
+  margin-top: -1px;
+
+  .work-shapes {
+    position: absolute;
+    top: 2%;
+    left: 28%;
+    z-index: -1;
+    -webkit-animation-name: rotateme;
+    animation-name: rotateme;
+    -webkit-animation-duration: 20s;
+    animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+
+  .sec-title {
+    margin-bottom: 60px;
+  }
+
+  .work-bg-blur {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 119, 60, 0.54) 0%, rgba(255, 119, 60, 0) 100%);
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+    height: 555px;
+    width: 555px;
+    z-index: -1;
+    border-radius: 50%;
+  }
+}
+
+.work-single-box {
+  background: var(--theme-color1);
+  padding: 30px 30px 30px 212px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
+  @include flex-center;
+
+  .work-content {
+    h4 {
+      font-size: 50px;
+      line-height: 61px;
+      margin-bottom: 40px;
+      position: relative;
+      padding-left: 20px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: -100px;
+        top: 29px;
+        background: rgba(244, 245, 248, 0.4117647059);
+        width: 100px;
+        height: 1px;
+      }
+
+      span {
+        font-weight: 300;
+      }
+    }
+
+    p {
+      margin-right: 50px;
+      line-height: 26px;
+    }
+
+    span.work-date {
+      font-family: var(--title-font);
+      font-weight: 500;
+      font-size: 18px;
+      color: var(--theme-color2);
+      margin: 9px 0 56px;
+      display: inline-block;
+    }
+
+    .nexella-buton a {
+      font-size: 16px;
+      padding: 15px 43px;
+    }
+
+  }
+
+  h3.wokr-number {
+    font-weight: 300;
+    font-size: 40px;
+    color: #A1A1A1;
+    position: absolute;
+    top: 83px;
+    left: 50px;
+  }
+
+  .work-img {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+
+    .work-shape {
+      position: absolute;
+      bottom: -30px;
+      left: -73px;
+      transition: 0.5s;
+      opacity: 0;
+    }
+  }
+
+  &:hover .work-shape {
+    opacity: 1;
+    left: -50px;
+    bottom: 0;
+  }
+
+}
+
+/*** 
+
+====================================================================
+    Work  Section Two
+====================================================================
+
+***/
+
+.work-section-two {
+  background: var(--theme-color-light);
+  padding: 115px 50px 120px;
+  position: relative;
+  z-index: 1;
+
+  .sec-title {
+    margin-bottom: 50px;
+
+    .sub-title {
+      padding-top: 0;
+    }
+  }
+
+  .work-single-box-two {
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    margin-bottom: 30px;
+    margin: 0 0 50px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: -0.1rem;
+      background: conic-gradient(from var(--gradient-angle), var(--theme-color2), var(--theme-color1), var(--theme-color2), var(--theme-color1), var(--theme-color2));
+      border-radius: inherit;
+      -webkit-animation: rotate 2.5s linear infinite;
+      animation: rotate 2.5s linear infinite;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      opacity: 0;
+    }
+
+    &:hover::before,
+    ::after {
+      opacity: 1;
+    }
+
+    @keyframes rotate {
+      0% {
+        --gradient-angle: 0deg;
+      }
+
+      100% {
+        --gradient-angle: 360deg;
+      }
+    }
+
+    .work-box-inner {
+      background: linear-gradient(0deg, #0C0C0C 0%, #1C1C1C 98.44%);
+      padding: 50px 20px 20px;
+      border-radius: 16px
+    }
+
+    .work-box-inner.style-two {
+      padding: 20px 20px 50px !important;
+      background: linear-gradient(0deg, #1C1C1C 0.69%, #0C0C0C 98.44%) !important;
+
+      .work-content {
+        margin-bottom: 0;
+        margin-top: 60px;
+
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .work-buton a {
+        top: inherit;
+        bottom: -9%;
+      }
+    }
+
+    &.bottom {
+      transform: translateY(50px) !important;
+
+    }
+
+    .work-content {
+      text-align: center;
+      margin-bottom: 40px;
+
+      h4 {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 38px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+          color: var(--theme-color2);
+        }
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--theme-color2);
+        border: 1px solid var(--border-theme-color1);
+        display: inline-block;
+        border-radius: 20px;
+        padding: 4px 20px;
+      }
+
+    }
+
+    .work-img {
+      position: relative;
+      z-index: 1;
+
+      &:after {
+        background: rgba(255, 255, 255, .3);
+        bottom: 0;
+        content: "";
+        left: 50%;
+        position: absolute;
+        right: 51%;
+        top: 0;
+        opacity: 1;
+        pointer-events: none;
+        transition: all 400ms linear;
+      }
+
+      img {
+        border-radius: 15px;
+      }
+
+      .work-buton a {
+        display: inline-block;
+        position: absolute;
+        top: -30px;
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+        background: var(--theme-color7);
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 1;
+        transform: rotate(-45deg);
+        font-size: 16px;
+        transition: all 400ms linear;
+      }
+    }
+
+    &:hover .work-img:after {
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: all 400ms linear;
+    }
+
+    &:hover .work-buton a {
+      background: var(--theme-color2);
+      color: var(--theme-color1);
+    }
+
+  }
+
+  .container-fluid {
+    padding: 0;
+    margin: 0;
+  }
+
+  .shape-1 {
+    position: absolute;
+    top: 13%;
+    left: 13%;
+    z-index: -1;
+  }
+
+  .shape-2 {
+    position: absolute;
+    top: 15%;
+    right: 12%;
+    z-index: -1;
+
+    img {
+      filter: brightness(0) invert(1);
+      opacity: 0.5;
+    }
+  }
+}

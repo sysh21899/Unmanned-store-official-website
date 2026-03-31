@@ -1,0 +1,525 @@
+/*** 
+
+====================================================================
+	Testimonial Section 
+====================================================================
+
+***/
+
+.testimonial-section {
+  position: relative;
+  padding: 120px 0 120px;
+  background-color: var(--theme-color2);
+  z-index: 1;
+
+  .testi-shape2 {
+    position: absolute;
+    left: 0;
+    mix-blend-mode: Luminosity;
+    z-index: -1;
+    bottom: 0;
+  }
+
+  .sec-title {
+    margin-bottom: 60px;
+
+    .sub-title {
+      padding-top: 0;
+    }
+  }
+
+  .tesimonial-img {
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: -2px;
+      right: 111px;
+      height: 50px;
+      width: 50px;
+      background: var(--theme-color2);
+      z-index: 1;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 48px;
+      right: 111px;
+      height: 5px;
+      width: 50px;
+      background: var(--theme-color6);
+      z-index: 1;
+    }
+  }
+}
+
+// Testimonial Single Box
+
+.testimonial-single_box {
+  margin-top: 10px;
+
+  .testimonial-author {
+    padding-left: 50px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 18px;
+      width: 40px;
+      background: #2b2b2b78;
+      content: "";
+      height: 1px;
+
+    }
+  }
+
+  .testi_content p {
+    color: var(--headings-color-2);
+    font-size: 20px;
+    line-height: 34px;
+    margin: 50px 5px 41px 0;
+  }
+
+  .testi-bio {
+    h4 {
+      color: var(--headings-color-2);
+      font-weight: var(--h5-font-weight);
+      font-size: 26px;
+      margin: 0 0 2px;
+    }
+
+    p {
+      font-size: 18px;
+      color: var(--headings-color-2);
+    }
+  }
+}
+
+// Counter box
+
+.counter_box {
+  @include flex-left;
+  gap: 30px;
+  margin-top: 48px;
+
+  .count-box {
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 90px;
+    color: var(--headings-color-2);
+
+    span.plus {
+      top: -20px;
+      position: relative;
+      font-size: 50px;
+    }
+  }
+
+  h6.counter-title {
+    color: var(--headings-color-2);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+
+/* Testi Owl carousel*/
+
+.tesimonail_list.default-navs .owl-nav {
+  position: absolute;
+  top: inherit;
+  left: -37%;
+  bottom: -44px;
+
+  .owl-next {
+    display: block;
+    margin: 0;
+    height: 50px;
+    width: 50px;
+    color: var(--theme-color1);
+    background-color: var(--theme-color2);
+    border-radius: 0;
+    font-size: 16px;
+    line-height: 50px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 500ms ease;
+    margin-top: -99px;
+
+    &:hover {
+      background: var(--theme-color3);
+    }
+  }
+
+  .owl-prev {
+    display: block;
+    margin: 0;
+    height: 50px;
+    width: 50px;
+    color: var(--theme-color1);
+    background-color: var(--theme-color3);
+    border-radius: 0;
+    font-size: 16px;
+    line-height: 50px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 500ms ease;
+
+    &:hover {
+      background: var(--theme-color2);
+    }
+  }
+}
+
+/*** 
+
+====================================================================
+	Testimonial Section Two
+====================================================================
+
+***/
+
+.testimonial-section-two {
+  padding: 120px 0 120px 120px;
+  backdrop-filter: blur(10px);
+
+  .testimonial-single_box-two {
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1;
+    border: 1.5px solid;
+    border-image-source: var(--gradient-4);
+    border-image-slice: 1;
+    border-radius: 10px;
+    color: var(--theme-color3);
+    margin-right: 40px;
+    overflow: hidden;
+    border-radius: 10px 0 0 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      right: 0;
+      height: 50px;
+      width: 50px;
+      background: var(--theme-color6);
+      z-index: -1;
+    }
+
+    .tesimonial-thumb {
+      flex-shrink: 0;
+    }
+
+    .testi_content {
+      margin-left: 50px;
+      margin-top: -7px;
+
+      p {
+        color: var(--text-color);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 34px;
+        margin: 37px 91px 0 0;
+      }
+
+      .testi_aroow {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        span {
+          font-family: "Plus Jakarta Sans", sans-serif;
+          font-weight: 400;
+          font-size: 34px;
+          color: var(--theme-color-white);
+        }
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 25px;
+        gap: 30px;
+        padding-left: 70px;
+
+        .testi-bio {
+          h4 {
+            margin: 0;
+            color: var(--text-color-bg-theme-color1);
+            position: relative;
+            z-index: 1;
+
+            &::before {
+              position: absolute;
+              content: "";
+              left: -70px;
+              top: 19px;
+              width: 57px;
+              height: 1px;
+              background: rgb(255 255 255 / 24%);
+              z-index: -1;
+            }
+          }
+
+          p {
+            font-size: 18px;
+            margin: 2px 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  // Testimonial list 2 owl-carousel
+
+  .column-right {
+    padding-left: 40px;
+  }
+
+  // Counter Box Testi
+
+  .counter_box-testi {
+    margin-top: 63px;
+
+    .count-box {
+      font-weight: 400;
+      font-size: 70px;
+      line-height: 56px;
+      color: var(--headings-color-2);
+      color: var(--theme-color2);
+      display: inline-block;
+      margin-bottom: 26px;
+      border-bottom: 1px solid #f4f5f869;
+      padding-bottom: 31px;
+      font-family: var(--title-font);
+
+      span.plus {
+        top: -14px;
+        position: relative;
+        font-size: 50px;
+      }
+
+      .counter-icn {
+        margin-top: -14px;
+        margin-left: 25px;
+      }
+    }
+
+    h6.counter-title {
+      font-size: 24px;
+      font-weight: var(--h5-font-weight);
+    }
+  }
+
+  .container-fluid {
+    padding: 0;
+    margin: 0;
+  }
+
+  .default-navs .owl-nav {
+    position: absolute;
+    top: inherit;
+    right: 41px;
+    bottom: 0;
+
+    .owl-next {
+      display: block;
+      margin: 0;
+      height: 50px;
+      width: 50px;
+      color: var(--theme-color1);
+      background-color: var(--theme-color3);
+      border-radius: 0;
+      font-size: 16px;
+      line-height: 50px;
+      font-weight: 700;
+      text-align: center;
+      transition: all 500ms ease;
+      margin-top: -99px
+    }
+
+    .owl-prev {
+      display: block;
+      margin: 0;
+      height: 50px;
+      width: 50px;
+      color: var(--theme-color1);
+      background-color: var(--theme-color2);
+      border-radius: 0;
+      font-size: 16px;
+      line-height: 50px;
+      font-weight: 700;
+      text-align: center;
+      transition: all 500ms ease;
+    }
+
+  }
+
+  .testi-sp {
+    position: absolute;
+    bottom: 11%;
+    right: 5%;
+    z-index: -1;
+  }
+}
+
+.owl-carousel .owl-item img {
+  width: inherit;
+}
+
+/*** 
+
+====================================================================
+	Testimonial Section Three
+====================================================================
+
+***/
+
+.testimonial-section-three {
+    padding: 97px 0 120px;
+    background: var(--theme-color-light);
+
+  .sec-title {
+    margin-bottom: 60px;
+  }
+
+  // Counter Box Testi
+
+  .column-right {
+    .counter_box-testi {
+      float: right;
+      margin-top: -7px;
+
+      .count-box {
+        font-weight: 500;
+        font-size: 62px;
+        line-height: 56px;
+        color: var(--headings-color-2);
+        color: var(--theme-color2);
+        display: inline-block;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(244, 245, 248, 0.4117647059);
+        padding-bottom: 14px;
+        font-family: var(--title-font);
+
+        span.plus {
+          top: -22px;
+          position: relative;
+          font-size: 40px;
+          font-weight: 600;
+        }
+
+        .counter-icn {
+          margin-top: -20px;
+          margin-left: 12px;
+          height: 60px;
+        }
+      }
+
+      h6.counter-title {
+        font-size: 24px;
+        font-weight: var(--h5-font-weight);
+      }
+    }
+
+  }
+
+}
+
+.testimonial-single_box-three {
+  position: relative;
+  z-index: 1;
+  margin: 1px 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -0.1rem;
+    background: conic-gradient(from var(--gradient-angle), var(--theme-color2), var(--theme-color1), var(--theme-color2), var(--theme-color1), var(--theme-color2));
+    border-radius: inherit;
+    -webkit-animation: rotate 2.5s linear infinite;
+    animation: rotate 2.5s linear infinite;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    opacity: 0;
+    border-radius: 16px;
+  }
+
+  &:hover::before,
+  ::after {
+    opacity: 1;
+  }
+
+  @keyframes rotate {
+    0% {
+      --gradient-angle: 0deg;
+    }
+
+    100% {
+      --gradient-angle: 360deg;
+    }
+  }
+
+  .testi-inner {
+    border: 1px solid var(--border-theme-color1);
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(0deg, #0C0C0C 0%, #1C1C1C 98.44%);
+    padding: 40px 40px 15px;
+    border-radius: 16px;
+  }
+
+
+  .testimonial-author {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+  }
+
+  .testi_aroow {
+    margin: 64px 0 18px;
+    filter: brightness(0) invert(0.4);
+    transition: 0.5s;
+  }
+
+  .testi_content {
+    p {
+      font-family: var(--title-font);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    .testi-bio {
+      h4 {
+        font-weight: 500;
+        font-size: 24px;
+        margin: 42px 0 3px;
+      }
+
+      p {
+        font-family: var(--title-font);
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &:hover .testi_aroow {
+    margin: 64px 0 18px;
+    filter: brightness(1) invert(0);
+  }
+}

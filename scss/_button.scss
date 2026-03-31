@@ -1,0 +1,269 @@
+/*** 
+
+====================================================================
+   Nexella button 
+====================================================================
+
+***/
+.nexella-buton a {
+  display: inline-block;
+  border: 0;
+  font-size: 18px;
+  color: var(--bg-theme-color1);
+  font-weight: 500;
+  padding: 14px 44px;
+  border-radius: 100px;
+  position: relative;
+  z-index: 1;
+  transition: 0.5s;
+  background: var(--theme-color2);
+  animation: 1s 1.6s fadeInUp both;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--text-color-bg-theme-color1);
+    border-radius: 100px;
+    transition: .5s;
+    transform: scale(0);
+  }
+
+  &:hover:before {
+    transform: scale(1);
+  }
+
+  &:hover {
+    color: var(--bg-theme-color1);
+  }
+
+  i {
+    position: absolute;
+    right: -60px;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    top: 0;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.5s;
+    background: var(--theme-color2);
+    font-weight: var(--h3-font-weight);
+    transform: rotate(-45deg);
+  }
+
+  &:hover i {
+    color: var(--bg-theme-color1);
+    background: var(--text-color-bg-theme-color1);
+    transform: scale(1);
+  }
+}
+
+
+/*** 
+
+====================================================================
+   Nexella button Style Two
+====================================================================
+
+***/
+.nexella-buton.style_two a {
+    background: transparent;
+    border: 1px solid var(--text-color);
+    padding: 7px 28px;
+    color: var(--text-color);
+
+  &::before {
+    background: var(--theme-color1);
+  }
+
+  &:hover {
+    color: var(--theme-color3);
+  }
+
+  i {
+    right: -51px;
+    height: 50px;
+    width: 50px;
+    border: 1px solid var(--text-color);
+    line-height: 50px;
+    top: -1px;
+    background: transparent;
+  }
+
+  &:hover i {
+    background: var(--theme-color1);
+    color: var(--theme-color3);
+  }
+}
+
+.style_five a {
+  padding: 14px 40px;
+  font-size: 16px;
+  margin-top: 31px;
+}
+
+/*** 
+
+====================================================================
+   Nexella button Style Three
+====================================================================
+
+***/
+
+.nexella-buton-style-three a {
+  display: inline-block;
+  border: 0;
+  font-size: 16px;
+  color: var(--bg-theme-color3);
+  font-weight: 500;
+  padding: 14px 44px;
+  border-radius: 100px;
+  position: relative;
+  z-index: 1;
+  transition: 0.5s;
+  background: var(--bg-theme-color1);
+  animation: 1s 1.6s fadeInUp both;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--theme-color2);
+    border-radius: 100px;
+    transition: .5s;
+    transform: scale(0);
+  }
+
+  &:hover:before {
+    transform: scale(1);
+  }
+
+  &:hover {
+    color: var(--bg-theme-color1);
+  }
+
+  i {
+    position: absolute;
+    right: -58px;
+    height: 58px;
+    width: 58px;
+    line-height: 58px;
+    top: 0;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.5s;
+    background: var(--bg-theme-color1);
+    font-weight: var(--h3-font-weight);
+    transform: rotate(-45deg);
+  }
+
+  &:hover i {
+    color: var(--bg-theme-color1);
+    background: var(--theme-color2);
+    transform: scale(1);
+  }
+}
+
+.nexella-buton.style_four {
+  a {
+    font-size: 16px;
+    padding: 15px 41px;
+  }
+}
+
+
+.theme-btn.small {
+  padding: 10px 40px;
+  line-height: 20px;
+  font-size: 12px;
+}
+
+/*** 
+
+====================================================================
+   Nexella Style button 
+====================================================================
+
+***/
+
+
+.nexella-style-btn {
+
+  a {
+    font-family: var(--title-font);
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--theme-color3);
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      content: "";
+      right: -35px;
+      top: 62%;
+      transform: translateY(-50%);
+      height: 70px;
+      width: 70px;
+      line-height: 70px;
+      border-radius: 50%;
+      background: var(--theme-color1);
+      z-index: -1;
+      transition: 0.5s;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      right: -35px;
+      top: 62%;
+      transform: translateY(-50%);
+      height: 0;
+      width: 0;
+      line-height: 70px;
+      border-radius: 50%;
+      border: 2px solid var(--theme-color2);
+      z-index: -1;
+      transition: 0.5s;
+      opacity: 0;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      width: 70px;
+      height: 70px;
+    }
+
+    &:hover::before {
+      opacity: 0;
+    }
+
+    &:hover {
+      color: var(--theme-color2);
+    }
+
+    img {
+      margin-left: 18px;
+    }
+  }
+
+  &.two {
+    a {
+
+      &::before {
+        background: var(--theme-color4);
+      }
+    }
+  }
+}

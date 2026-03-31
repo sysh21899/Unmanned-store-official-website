@@ -1,0 +1,107 @@
+/* Nexella | IT Solutions & Technology HTML Template
+
+Template Name: Nexella
+Version: 1.0.0
+License: copyright commercial
+
+/************ TABLE OF CONTENTS ***************
+1. Fonts
+2. Reset
+3. Global Settings
+4. Main Header / Two /
+5. Sticky Header 
+6. Mobile Menu
+7. Section Title
+8. Page Title
+10. Banner Section / Two 
+11. About Section / Two 
+12. Mission / 
+13. Services Section / Two 
+14. Process Section / Two 
+15. Work Section / Two /
+16. Testimonial Section / Two /
+17. Why Choose Us / Two
+18. Pricing Section
+19. team Section / Two
+20. Contact Sectiom / Two
+21. News Section / Two
+22. Marquee / Two / Three
+23. Brand Section
+24. Video Section
+25. Main Footer /Two
+**********************************************/
+
+@import "scss-bootstrap/functions";
+@import "scss-bootstrap/variables";
+@import "scss-bootstrap/mixins";
+@import "common/root.scss";
+@import "common/mixing.scss";
+@import "common/loader.scss";
+@import "common/boxed-layout.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@import url('animate.css');
+@import url('owl.css');
+@import url('swiper.min.css');
+@import url('jquery.fancybox.min.css');
+@import url('jquery-ui.css');
+@import url('linear.css');
+@import url('select2.min.css');
+@import url('fontawesome-free.css');
+@import url('fontawesome.css');
+@import url('flaticon.css');
+@import url('flaticon-set-business.css');
+@import url('tm-bs-mp.css');
+@import url('tm-utility-classes.css');
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: false;
+}
+
+
+// import SCSS components one by one
+@import "reset.scss";
+@import "button.scss";
+@import "animate.scss";
+@import "search-popup.scss";
+@import "header.scss";
+@import "mobile-menu.scss";
+@import "section-title.scss";
+
+@import "banner.scss";
+@import "about.scss";
+@import "mission.scss";
+@import "services.scss";
+@import "testimonials.scss";
+@import "process.scss";
+@import "work.scss";
+@import "marquee.scss";
+@import "team.scss";
+@import "contact.scss";
+@import "news.scss";
+@import "why-choose.scss";
+@import "skill.scss";
+@import "pricing.scss";
+@import "brand.scss";
+@import "faqs.scss";
+@import "sidebar.scss";
+@import "footer.scss";
+
+
+
+
+//inner
+@import "inner/page-title.scss";
+@import "inner/404.scss";
+@import "inner/service-details.scss";
+@import "inner/project-details.scss";
+@import "inner/news-details.scss";
+@import "inner/news-sidebar.scss";
+@import "inner/news-comment.scss";
+@import "inner/team-details.scss";
+@import "inner/contact-page.scss";
+
+

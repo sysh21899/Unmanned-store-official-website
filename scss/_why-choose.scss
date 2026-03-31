@@ -1,0 +1,230 @@
+/***
+
+====================================================================
+    Why Choose US Section
+====================================================================
+
+***/
+.why-choose-us-section {
+    background-color: var(--theme-color-light);
+    position: relative;
+    z-index: 1;
+    padding: 115px 0 105px;
+
+    .sec-title {
+        margin-bottom: 0;
+
+        .sub-title {
+            padding-top: 0;
+        }
+    }
+
+    .nexella-buton {
+        text-align: right;
+        margin-right: 60px;
+
+        a {
+            font-size: 16px;
+            padding: 14px 42px;
+        }
+    }
+
+    .choose-single-box {
+        border-bottom: 1px solid var(--border-theme-color1);
+        margin-right: 48px;
+        margin-bottom: 30px;
+        padding-bottom: 4px;
+
+        .choose-icon {
+            i {
+                display: inline-block;
+                background: var(--theme-color1);
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+                line-height: 60px;
+                text-align: center;
+                color: var(--theme-color2);
+                font-size: 26px;
+                margin-bottom: 15px;
+                transition: all 400ms linear;
+                cursor: pointer;
+            }
+        }
+
+        .choose-content {
+            h4 {
+                font-weight: 500;
+                font-size: 26px;
+                margin: 0 0 14px;
+            }
+
+            p {
+                line-height: 26px;
+                font-size: 16px;
+            }
+        }
+
+        &:nth-child(2) {
+            border-bottom: 0;
+        }
+
+        &:hover .choose-icon i {
+            transform: scaleX(-1);
+        }
+    }
+
+    .column-right {
+        padding-left: 52px;
+
+        .choose-single-box {
+            margin-right: 0;
+        }
+
+    }
+
+    .choose-thumb {
+        margin-left: -10px;
+        position: relative;
+        z-index: 1;
+        margin-top: -40px;
+
+        img {
+            width: 100%;
+        }
+
+        .dote-shape {
+            position: absolute;
+            left: 20%;
+            bottom: -22%;
+            z-index: -1;
+        }
+    }
+
+    .choose-shape {
+        position: absolute;
+        top: 53px;
+        left: 5%;
+        right: 0;
+        text-align: center;
+        z-index: -1;
+    }
+
+    .choose-shape2 {
+        position: absolute;
+        top: -56%;
+        right: 0;
+        z-index: -1;
+    }
+
+    .buler-bg {
+        position: absolute;
+        left: 35%;
+        bottom: 5%;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(255, 119, 60, 0.54) 0%, rgba(255, 119, 60, 0) 100%);
+        height: 577px;
+        width: 577px;
+        z-index: -1;
+    }
+}
+
+/***
+
+====================================================================
+    Why Choose US Section Two
+====================================================================
+
+***/
+
+.why-choose-us-section-two {
+    padding: 120px 0 45px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    .choose-shape {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 25px;
+        max-width: 645px;
+
+        .feature-item {
+            position: relative;
+            background: #2B2523;
+            border-radius: 999px;
+
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                inset: -0.1rem;
+                background: conic-gradient(from var(--gradient-angle), var(--theme-color2), var(--theme-color1), var(--theme-color2), var(--theme-color1), var(--theme-color2));
+                border-radius: inherit;
+                -webkit-animation: rotate 2.5s linear infinite;
+                animation: rotate 2.5s linear infinite;
+                -webkit-transition: all 300ms ease;
+                transition: all 300ms ease;
+                opacity: 0;
+                border-radius: 999px;
+
+            }
+
+            &:hover::before,
+            ::after {
+                opacity: 1;
+            }
+
+            @keyframes rotate {
+                0% {
+                    --gradient-angle: 0deg;
+                }
+
+                100% {
+                    --gradient-angle: 360deg;
+                }
+            }
+
+            .featuer-list {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 24px;
+                border-radius: 999px;
+                font-family: var(--title-font);
+                font-weight: 500;
+                font-size: 18px;
+                color: var(--theme-color-white);
+                position: relative;
+                z-index: 1;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+
+
+            }
+
+        }
+    }
+
+    .nexella-buton {
+        margin-top: 45px;
+
+        a {
+            font-size: 16px;
+            padding: 14px 43px;
+        }
+    }
+
+    .btn-box {
+        display: inline-block;
+        margin-top: 283px;
+        margin-left: -75px;
+    }
+}
