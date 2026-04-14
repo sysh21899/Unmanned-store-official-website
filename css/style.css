@@ -119,6 +119,48 @@ License: copyright commercial
   --container-pb: 120px;
 }
 
+/* =========================================
+   施工中彈跳視窗 (Modal) 樣式
+   ========================================= */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 99999; /* 確保在選單最上層 */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(15, 15, 35, 0.85); 
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: #1a1a2e; 
+    margin: 15vh auto; 
+    padding: 2.5rem;
+    border: 1px solid #00d4ff; 
+    border-radius: 1rem;
+    width: 85%; 
+    max-width: 450px; 
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+}
+
+.close-btn {
+    color: #a1a1aa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #00d4ff;
+}
 /*
  * typography.scss
  * -----------------------------------------------
