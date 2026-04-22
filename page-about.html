@@ -47,7 +47,11 @@
                   <li class="dropdown">
                     <a href="#">產品</a>
                     <ul>
-                      <li><a href="page-about.html">無人載具車</a></li>
+                      <li>
+                        <a href="javascript:void(0)" onclick="openModal()"
+                          >無人載具車</a
+                        >
+                      </li>
                       <li><a href="page-project.html">智能系統櫃</a></li>
                       <li><a href="page-project-details.html">智能系統</a></li>
                     </ul>
@@ -70,16 +74,6 @@
               <!-- Main Menu End-->
             </div>
             <div class="outer-box">
-              <div class="ui-btn-outer">
-                <button class="ui-btn ui-btn search-btn">
-                  <span class="icon lnr lnr-icon-search"> Search...</span>
-                </button>
-              </div>
-              <div class="header-btn">
-                <a href="page-contact.html"
-                  >get solution <i class="fa-solid fa-arrow-right"></i
-                ></a>
-              </div>
               <!-- Mobile Nav toggler -->
               <div class="mobile-nav-toggler">
                 <span class="icon lnr-icon-bars"></span>
@@ -607,6 +601,51 @@
     <div class="scroll-to-top scroll-to-target" data-target="html">
       <span class="fa fa-angle-up"></span>
     </div>
+
+    <div id="constructionModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+
+        <h3 style="color: #00d4ff; margin-bottom: 1rem">網頁施工中</h3>
+
+        <img
+          src="images/main-home/under_construction.png"
+          alt="施工中"
+          style="
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin: 0 auto;
+            display: block;
+          "
+        />
+
+        <p style="margin-top: 1.5rem; color: #a1a1aa">
+          此功能正在努力開發中，敬請期待！
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // 打開彈跳視窗
+      function openModal() {
+        document.getElementById("constructionModal").style.display = "block";
+        1;
+      }
+
+      // 關閉彈跳視窗
+      function closeModal() {
+        document.getElementById("constructionModal").style.display = "none";
+      }
+
+      // 點擊視窗外部 (遮罩區域) 時，也會關閉視窗
+      window.onclick = function (event) {
+        let modal = document.getElementById("constructionModal");
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
 
     <script src="js/jquery.js"></script>
     <script src="js/popper.min.js"></script>
