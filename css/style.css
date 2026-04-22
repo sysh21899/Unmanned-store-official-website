@@ -9185,3 +9185,33 @@ section.contact-details {
 }
 
 /*# sourceMappingURL=style.css.map */
+/* =========================================
+   修復：建立隱形橋樑，防止下拉選單在滑鼠移動時消失
+   ========================================= */
+.main-menu .navigation > li > ul::before {
+    content: "";
+    position: absolute;
+    top: -30px; /* 向上延伸感應區，數值可依實際空隙微調 */
+    left: 0;
+    width: 100%;
+    height: 30px; /* 高度與 top 的絕對數值相同 */
+    background: transparent; /* 保持透明，不影響視覺 */
+}
+
+/* 確保下拉選單內的子選單 (第三層) 也不會斷層 */
+.main-menu .navigation > li > ul > li > ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px; /* 針對左右彈出的子選單向左延伸 */
+    width: 20px;
+    height: 100%;
+    background: transparent;
+}
+
+/* =========================================
+   放大客服區塊的 LINE 圖示
+   ========================================= */
+.contact-details__info li .icon .fa-line {
+    font-size: 38px; /* 原本預設是 25px，調大讓它更飽滿 */
+}
